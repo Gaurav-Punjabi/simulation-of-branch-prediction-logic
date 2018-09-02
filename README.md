@@ -29,3 +29,9 @@
    If the prediction was correct then the state proceeds towards "Strongly True" else it proceeds towards "Strongly False".
    When the state is already at "Strongly False" and the prediction was false then it does not change its state until the 
    prediction becomes true same goes for "Strongly True".
+
+## Instructions on how to use it
+  * It is pretty simple to test the branch prediction of a given program.You just need to pass the path of the Program that you want to test as command line arguments.
+  * Below is the syntax to run the application (NOTE First you need to compile the program using javac).
+  
+            java PredictionCalculator [PATH TO THE C/C++ CODE]
