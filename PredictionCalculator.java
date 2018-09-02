@@ -136,7 +136,16 @@ public class PredictionCalculator {
 	}
 
 	public static void main(String[] args)throws Exception {
-		PredictionCalculator predictionCalculator = new PredictionCalculator("Test.c");
+		if(args.length == 0) {
+			System.out.println("Please pass the path to the program that needs to be tested..");
+			return;
+		}
+		String path = arg[0];
+		if(!new File(path).isFile()) {
+			System.out.println("The given path is incorrect please check the path.");	
+			return;
+		}
+		PredictionCalculator predictionCalculator = new PredictionCalculator(path);
 		double percentage = predictionCalculator.getPredictionAccuracy();
 		System.out.println("The accuracy of the branch prediction logic for the given code is " + percentage);
 	}
